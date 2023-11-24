@@ -9,7 +9,7 @@ import pickle
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
-from imblearn.over_sampling import SMOTE
+#from imblearn.over_sampling import SMOTE
 
 
 data = pd.read_csv('healthcare-dataset-stroke-data.csv')
