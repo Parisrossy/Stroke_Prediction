@@ -75,9 +75,9 @@ cross_validation = model.predict(xtrain)
 pred = model.predict(xtest) 
 
 # %pip install imbalanced-learn
-from imblearn.over_sampling import SMOTE
-import pandas as pd
-import seaborn as sns
+# from imblearn.over_sampling import SMOTE
+# import pandas as pd
+# import seaborn as sns
 
 # Assuming you have a Datadf df with features (x) and target variable (y)
 # Replace 'Diabetes' with the actual name of your target variable
