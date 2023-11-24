@@ -82,23 +82,23 @@ pred = model.predict(xtest)
 # Assuming you have a Datadf df with features (x) and target variable (y)
 # Replace 'Diabetes' with the actual name of your target variable
 
-# Extract features (x) and target variable (y)
-y = df.stroke
-x = df.drop('stroke', axis=1)
+# # Extract features (x) and target variable (y)
+# y = df.stroke
+# x = df.drop('stroke', axis=1)
 
-# Initialize SMOTE
-smote = SMOTE(sampling_strategy='auto',  random_state=42)  # You can adjust the sampling_strategy as needed
+# # Initialize SMOTE
+# smote = SMOTE(sampling_strategy='auto',  random_state=42)  # You can adjust the sampling_strategy as needed
 
-# Apply SMOTE to generate synthetic samples
-x_resampled, y_resampled = smote.fit_resample(x, y)
+# # Apply SMOTE to generate synthetic samples
+# x_resampled, y_resampled = smote.fit_resample(x, y)
 
-# Create a new Datadf with the resampled data
-ds = pd.concat([pd.DataFrame(x_resampled, columns=x.columns), pd.Series(y_resampled, name='stroke')], axis=1)
+# # Create a new Datadf with the resampled data
+# ds = pd.concat([pd.DataFrame(x_resampled, columns=x.columns), pd.Series(y_resampled, name='stroke')], axis=1)
 
-# Plot the count of samples for each class in the resampled data
-sns.countplot(x=ds['stroke'])
-model = pickle.dump(model, open('healthcare(stroke).pkl', 'wb'))
-print('\nModel is saved\n')
+# # Plot the count of samples for each class in the resampled data
+# sns.countplot(x=ds['stroke'])
+# model = pickle.dump(model, open('healthcare(stroke).pkl', 'wb'))
+# print('\nModel is saved\n')
 
 #-------Streamlit development------
 model = pickle.load(open('healthcare(stroke).pkl', "rb"))
